@@ -1,0 +1,12 @@
+{
+  "name": "platzi-media-player",
+  "version": "1.0.0",
+  "description": "Proyecto del Curso Profesional de Javascript, Escuela de Javascript de Platzi",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "keywords": [
+    "javascript", "platzi"
+  ],
+  "license": "MIT"
+}
