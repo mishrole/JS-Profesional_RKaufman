@@ -3,10 +3,24 @@
   "version": "1.0.0",
   "description": "Proyecto del Curso Profesional de Javascript, Escuela de Javascript de Platzi",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "parcel index.html"
+  },
   "author": "",
   "keywords": [
-    "javascript", "platzi"
+    "javascript",
+    "platzi"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "browserslist": [
+    "last 3 and_chr versions",
+    "last 3 chrome versions",
+    "last 3 opera versions",
+    "last 3 ios_saf versions",
+    "last 3 safari versions"
+  ],
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "typescript": "^4.2.3"
+  }
 }

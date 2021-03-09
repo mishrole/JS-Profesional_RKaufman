@@ -1,4 +1,9 @@
+import MediaPlayer from "../MediaPlayer";
+
 class AutoPause {
+    private threshold: number;
+    private pausedByVisibility: boolean;
+    player: MediaPlayer;
     // Como vamos a usar el valor de threshold en varios lugares, lo definimos en un constructor
     constructor() {
         this.threshold = 0.25
@@ -26,7 +31,7 @@ class AutoPause {
     }
 
     // Pausa si se sale de la vista, y reanuda si regresa
-    handleIntersection(entries) {
+    private handleIntersection(entries: IntersectionObserverEntry[]) {
         const entry = entries[0];
         const isVisible = entry.intersectionRatio >= this.threshold;
         // Como tenemos la instancia de la clase, podemos usar play y pause
@@ -38,7 +43,7 @@ class AutoPause {
     }
 
     // Pausa si cambia de pestaña, y reanuda si regresa
-    handleVisibilityChange() {
+    private handleVisibilityChange() {
         const isVisible = document.visibilityState === "visible";
         
         if(isVisible) {
